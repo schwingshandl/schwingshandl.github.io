@@ -26,35 +26,20 @@ export default function Home() {
                     </p>
 
                     <div className="space-y-4">
-                        <Button
-                            href="/experience"
-                            fullWidth
-                            inner={
-                                <>
-                                    <FileText className="mr-2 size-4" />
-                                    Experience
-                                </>
-                            }
-                        />
+                        <Button href="/experience" fullWidth>
+                            <FileText className="mr-2 size-4" />
+                            Experience
+                        </Button>
                         <Button
                             href="mailto:lisamarie@schwingshandl.org"
                             fullWidth
-                            inner={
-                                <>
-                                    <Mail className="mr-2 size-4" /> Contact
-                                </>
-                            }
-                        />
-                        <Button
-                            href="https://cal.com/"
-                            fullWidth
-                            inner={
-                                <>
-                                    <Calendar className="mr-2 size-4" />
-                                    Schedule a Meeting
-                                </>
-                            }
-                        />
+                        >
+                            <Mail className="mr-2 size-4" /> Contact
+                        </Button>
+                        <Button href="https://cal.com/" fullWidth>
+                            <Calendar className="mr-2 size-4" />
+                            Schedule a Meeting
+                        </Button>
                     </div>
 
                     <div className="mt-6 flex justify-center space-x-4">

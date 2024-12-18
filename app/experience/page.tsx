@@ -6,15 +6,9 @@ export default function Experience() {
         <div className="flex min-h-screen flex-col items-center justify-center bg-[#E6E6FA] p-4">
             <main className="w-full max-w-2xl overflow-hidden rounded-lg bg-white shadow-xl">
                 <div className="p-6">
-                    <Button
-                        href="/"
-                        inner={
-                            <>
-                                <ArrowLeft className="mr-2 size-4" /> Back to
-                                Home{" "}
-                            </>
-                        }
-                    />
+                    <Button href="/">
+                        <ArrowLeft className="mr-2 size-4" /> Back to Home{" "}
+                    </Button>
 
                     <h1 className="mb-6 text-3xl font-bold text-gray-800">
                         Experience
