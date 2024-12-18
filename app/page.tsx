@@ -1,8 +1,7 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { Calendar, Mail, FileText, Linkedin, Instagram } from "lucide-react";
+import Button from "./components/button";
 
 export default function Home() {
     return (
@@ -27,44 +26,54 @@ export default function Home() {
                     </p>
 
                     <div className="space-y-4">
-                        <Link
+                        <Button
                             href="/experience"
-                            className="inline-flex w-full items-center justify-center rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:text-blue-700 focus:ring-2 focus:ring-blue-700"
-                        >
-                            <FileText className="mr-2 size-4" /> Experience
-                        </Link>
-                        <Link
+                            fullWidth
+                            inner={
+                                <>
+                                    <FileText className="mr-2 size-4" />
+                                    Experience
+                                </>
+                            }
+                        />
+                        <Button
                             href="mailto:lisamarie@schwingshandl.org"
-                            className="inline-flex w-full items-center justify-center rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:text-blue-700 focus:ring-2 focus:ring-blue-700"
-                        >
-                            <Mail className="mr-2 size-4" /> Contact
-                        </Link>
-                        <Link
+                            fullWidth
+                            inner={
+                                <>
+                                    <Mail className="mr-2 size-4" /> Contact
+                                </>
+                            }
+                        />
+                        <Button
                             href="https://cal.com/"
-                            className="inline-flex w-full items-center justify-center rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:text-blue-700 focus:ring-2 focus:ring-blue-700"
-                        >
-                            <Calendar className="mr-2 size-4" /> Schedule a
-                            Meeting
-                        </Link>
+                            fullWidth
+                            inner={
+                                <>
+                                    <Calendar className="mr-2 size-4" />
+                                    Schedule a Meeting
+                                </>
+                            }
+                        />
                     </div>
 
                     <div className="mt-6 flex justify-center space-x-4">
-                        <a
+                        <Link
                             href="https://www.linkedin.com/in/schmolmueller-schwingshandl/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-600 hover:text-gray-800"
                         >
                             <Linkedin className="size-6" />
-                        </a>
-                        <a
+                        </Link>
+                        <Link
                             href="https://www.instagram.com/lisamarieschwingshandl/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-600 hover:text-gray-800"
                         >
                             <Instagram className="size-6" />
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </main>
